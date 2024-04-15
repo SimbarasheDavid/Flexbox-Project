@@ -1,0 +1,319 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro";
+}
+
+.slide {
+  height: 40;
+  width: 100px;
+  position: absolute;
+  background-color: #c2c1bd;
+  transition: 0.5s ease;
+  transform: translateX(-180px);
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  color: #011a41;
+  font-weight: 500;
+  padding: 5px 0;
+  display: block;
+  text-transform: none;
+  transition: 0.2s ease-out;
+}
+
+ul li:hover a {
+  color: #fff;
+  background-color: #F9C31D;
+}
+
+input {
+  display: none;
+  visibility: hidden;
+  --webkit-appearance: none;
+}
+
+.toggle {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 20px;
+  left: 40px;
+  z-index: 1;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.toggle .common {
+  position: absolute;
+  height: 2px;
+  width: 2px;
+  background-color: #8000ff;
+  border-radius: 50px;
+  transition: 0.3s ease;
+}
+
+.toggle .top_line {
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50);
+}
+
+.toggle .middle_line {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50);
+}
+
+.toggle .bottom_line {
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50);
+}
+
+input:checked ~ .toggle .top_line {
+  left: 2px;
+  top: 14px;
+  width: 25px;
+  transform: rotate(45deg);
+}
+
+input:checked ~ .toggle .button_line {
+  left: 2px;
+  top: 14px;
+  width: 25px;
+  transform: rotate(-45deg);
+}
+
+input:checked ~ .toggle .middle_line {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+input:checked ~ .slide {
+  transform: translateX(0);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#hero {
+  background: url(/bg-masthead.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+#hero h1 {
+  font-size: 92px;
+  font-weight: 750;
+}
+#hero p {
+  font-style: italic;
+  font-weight: 800;
+  font-size: 24px;
+}
+#hero button {
+  padding: 20px 30px;
+  color: #fff;
+  font-weight: 500;
+  background: #3581a0;
+  border: none;
+  border-radius: 5px;
+}
+#hero button:hover {
+  background: #fff;
+  color: #000;
+}
+
+#offerz {
+  text-align: center;
+  padding: 80px 0;
+}
+#offerz h2 {
+  font-size: 30px;
+  font-weight: 800;
+}
+#offerz p {
+  margin-bottom: 60px;
+  margin-top: 10px;
+}
+#offerz button {
+  background: #243a40;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+}
+#offerz button:hover {
+  background: #000;
+}
+
+#services {
+  background: #3581a0;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 55px;
+}
+#services h3 {
+  color: #f2b832;
+  font-size: 14px;
+  font-weight: 700;
+}
+#services h2 {
+  font-size: 42px;
+  font-weight: 800;
+}
+#services p {
+  font-size: 14px;
+  font-weight: 800;
+}
+#services .wrapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 50px;
+}
+#services .card .textbox h4 {
+  font-weight: 800;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#next {
+  background: url(/bg-callout.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+#next h1 {
+  font-size: 60px;
+  text-align: center;
+  font-weight: 800;
+}
+#next span {
+  font-style: italic;
+}
+#next button {
+  padding: 20px 30px;
+  color: #fff;
+  font-weight: 500;
+  background: #3581a0;
+  border: none;
+  border-radius: 5px;
+}
+
+#portfolio {
+  text-align: center;
+}
+#portfolio h2 {
+  color: #f2b832;
+  font-size: 14px;
+  font-weight: 700;
+}
+#portfolio h3 {
+  font-size: 42px;
+  font-weight: 800;
+}
+#portfolio .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 200px;
+  color: #fff;
+  margin-top: 30px;
+}
+#portfolio .wrapper .card {
+  position: relative;
+}
+#portfolio .wrapper .card .img {
+  width: 100%;
+}
+#portfolio .wrapper .card .img img {
+  width: 100%;
+}
+#portfolio .wrapper .card .text {
+  position: absolute;
+  left: 40px;
+  right: 150px;
+  bottom: 40px;
+  text-align: left;
+}
+
+#click-me {
+  background: #3581a0;
+  text-align: center;
+  padding: 100px 0;
+  /* .map{
+      margin-top: 50px;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  } */
+}
+#click-me .btnbox {
+  margin-top: 10px;
+  padding: 20px 20px;
+}
+#click-me button:first-child {
+  margin-top: 30px;
+}
+#click-me .footer {
+  text-transform: capitalize;
+  text-align: center;
+  padding: 50px;
+  background-color: #1D809F;
+  margin-top: 30px;
+}
+#click-me .bye {
+  margin-top: 10px;
+  background-color: #fff;
+  font-size: 20px;
+  padding: 15px 25px;
+  color: rgb(2, 15, 31);
+  border: #fff;
+  border-radius: 10px;
+}
+#click-me .goodbye {
+  margin-top: 10px;
+  background-color: rgb(2, 15, 31);
+  font-size: 20px;
+  padding: 15px 15px;
+  color: aliceblue;
+  border: rgb(2, 15, 31);
+  border-radius: 10px;
+}
+#click-me .bye:hover {
+  background-color: rgb(19, 130, 194);
+  color: aliceblue;
+}
+#click-me .goodbye:hover {
+  background-color: rgb(221, 227, 230);
+  color: rgb(12, 30, 46);
+}
+
+.don {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */
